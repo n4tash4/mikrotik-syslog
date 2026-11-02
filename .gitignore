@@ -1,0 +1,5 @@
+# Local secret env-adds (management SSH PASSWORD) — never commit.
+rsc/secrets.local.rsc
+
+# Built container-archive tars (produced by build.sh).
+*.tar
