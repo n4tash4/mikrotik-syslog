@@ -151,8 +151,10 @@
 # inventory/group_vars/all.yml:
 #   mkt_common_settings.system_logging_action_remote: '192.168.102.3'
 # inventory/group_vars/mikrotik/system_logging.yml: remote rules enabled.
-# inventory/host_vars/router: syslog_src_address 192.168.100.1 (so the
-#   router's lines resolve to "router" instead of the bare bridge gateway).
+# inventory/host_vars/{router,haxs}: syslog_src_address pinned to the mgmt IP
+#   (router would log as the PTR-less bridge gateway 192.168.102.1; haxs's
+#   default route is vlan20, so it would send from 192.168.20.20, outside the
+#   mgmt-only accept in STEP 5).
 
 # =============================================================================
 # VERIFY
